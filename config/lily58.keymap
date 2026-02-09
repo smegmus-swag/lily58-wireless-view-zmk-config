@@ -21,6 +21,11 @@
             bindings = <&bt BT_NXT>;
             key-positions = <50 56>;
         };
+
+        superDel {
+            bindings = <&kp LG(DELETE)>;
+            key-positions = <52 0>;
+        };
     };
 
     keymap {
