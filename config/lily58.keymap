@@ -14,17 +14,32 @@
 
         btPrev {
             bindings = <&bt BT_PRV>;
-            key-positions = <50 55>;
+            key-positions = <50 55 36 24>;
         };
 
         btNext {
             bindings = <&bt BT_NXT>;
-            key-positions = <50 56>;
+            key-positions = <50 56 24 36>;
         };
 
         superDel {
             bindings = <&kp LG(DELETE)>;
             key-positions = <52 0>;
+        };
+
+        volUp {
+            bindings = <&kp C_VOLUME_UP>;
+            key-positions = <24 36 56>;
+        };
+
+        volDown {
+            bindings = <&kp K_VOLUME_DOWN>;
+            key-positions = <24 36 57>;
+        };
+
+        tilde {
+            bindings = <&kp GRAVE>;
+            key-positions = <24 50 11>;
         };
     };
 
