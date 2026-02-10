@@ -46,6 +46,20 @@
             bindings = <&kp LS(LA(LEFT_ARROW))>;
             label = "HIGHLIGHTLEFT";
         };
+
+        deleteChunk: deleteChunk {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(BACKSPACE)>;
+            label = "DELETECHUNK";
+        };
+
+        fwdDeleteChunk: fwdDeleteChunk {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(DELETE)>;
+            label = "FWDDELETECHUNK";
+        };
     };
 
     keymap {
@@ -81,10 +95,10 @@
 
             display-name = "Bluetoof";
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans  &trans  &trans  &trans  &trans  &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans  &trans  &trans  &trans  &trans  &soft_off
 &trans      &trans        &trans        &trans        &trans        &trans                          &trans  &trans  &trans  &trans  &trans  &trans
 &trans      &trans        &trans        &trans        &trans        &trans                          &trans  &trans  &trans  &trans  &trans  &trans
-&trans      &trans        &trans        &trans        &trans        &trans        &trans    &trans  &trans  &trans  &trans  &trans  &trans  &soft_off
+&trans      &trans        &trans        &trans        &trans        &trans        &trans    &trans  &trans  &trans  &trans  &trans  &trans  &kp DELETE
                                         &trans        &trans        &trans        &trans    &trans  &trans  &trans  &trans
             >;
         };
@@ -95,7 +109,7 @@
 &trans    &trans          &trans          &trans           &trans   &email                    &trans  &trans          &kp C_PLAY_PAUSE  &kp C_PREVIOUS   &kp C_NEXT  &kp C_VOLUME_UP
 &trans    &highlightLeft  &kp UP_ARROW    &highlightRight  &trans   &trans                    &trans  &deskLeft       &kp UP_ARROW      &deskRight       &trans      &kp C_VOLUME_DOWN
 &kp HOME  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END  &trans                    &trans  &kp LEFT_ARROW  &kp DOWN_ARROW    &kp RIGHT_ARROW  &trans      &trans
-&trans    &trans          &trans          &trans           &trans   &trans  &trans    &trans  &trans  &trans          &trans            &trans           &trans      &kp DELETE
+&trans    &trans          &trans          &trans           &trans   &trans  &trans    &trans  &trans  &trans          &trans            &trans           &trans      &deleteChunk
                                           &trans           &trans   &trans  &trans    &trans  &trans  &trans          &trans
             >;
         };
