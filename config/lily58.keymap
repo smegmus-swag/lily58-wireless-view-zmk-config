@@ -43,7 +43,7 @@
         };
 
         tilde {
-            bindings = <&kp GRAVE>;
+            bindings = <&kp TILDE>;
             key-positions = <24 50 11>;
             timeout-ms = <200>;
         };
