@@ -15,31 +15,37 @@
         btPrev {
             bindings = <&bt BT_PRV>;
             key-positions = <50 55 36 24>;
+            timeout-ms = <200>;
         };
 
         btNext {
             bindings = <&bt BT_NXT>;
             key-positions = <50 56 24 36>;
+            timeout-ms = <200>;
         };
 
         superDel {
             bindings = <&kp LG(DELETE)>;
             key-positions = <52 0>;
+            timeout-ms = <200>;
         };
 
         volUp {
             bindings = <&kp C_VOLUME_UP>;
             key-positions = <24 36 56>;
+            timeout-ms = <200>;
         };
 
         volDown {
             bindings = <&kp K_VOLUME_DOWN>;
             key-positions = <24 36 57>;
+            timeout-ms = <200>;
         };
 
         tilde {
             bindings = <&kp GRAVE>;
             key-positions = <24 50 11>;
+            timeout-ms = <200>;
         };
     };
 
