@@ -92,11 +92,11 @@
         arrows {
             display-name = "Arrow";
             bindings = <
-&trans  &trans          &trans          &trans           &trans  &email                    &trans  &trans          &trans          &trans           &trans  &kp K_VOLUME_UP
-&trans  &highlightLeft  &kp UP_ARROW    &highlightRight  &trans  &trans                    &trans  &deskLeft       &kp UP_ARROW    &deskRight       &trans  &kp K_VOLUME_DOWN
-&trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans                    &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
-&trans  &trans          &trans          &trans           &trans  &trans  &trans    &trans  &trans  &trans          &trans          &trans           &trans  &kp DELETE
-                                        &trans           &trans  &trans  &trans    &trans  &trans  &trans          &trans
+&trans    &trans          &trans          &trans           &trans   &email                    &trans  &trans          &kp K_PLAY_PAUSE  &kp K_PREVIOUS   &kp K_NEXT  &kp K_VOLUME_UP
+&trans    &highlightLeft  &kp UP_ARROW    &highlightRight  &trans   &trans                    &trans  &deskLeft       &kp UP_ARROW      &deskRight       &trans      &kp K_VOLUME_DOWN
+&kp HOME  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END  &trans                    &trans  &kp LEFT_ARROW  &kp DOWN_ARROW    &kp RIGHT_ARROW  &trans      &trans
+&trans    &trans          &trans          &trans           &trans   &trans  &trans    &trans  &trans  &trans          &trans            &trans           &trans      &kp DELETE
+                                          &trans           &trans   &trans  &trans    &trans  &trans  &trans          &trans
             >;
         };
 
