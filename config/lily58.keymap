@@ -95,7 +95,7 @@
 &trans  &trans          &trans          &trans           &trans  &email                    &trans  &trans          &trans          &trans           &trans  &kp K_VOLUME_UP
 &trans  &highlightLeft  &kp UP_ARROW    &highlightRight  &trans  &trans                    &trans  &deskLeft       &kp UP_ARROW    &deskRight       &trans  &kp K_VOLUME_DOWN
 &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans                    &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
-&trans  &trans          &trans          &trans           &trans  &trans  &erm      &trans  &trans  &trans          &trans          &trans           &trans  &trans
+&trans  &trans          &trans          &trans           &trans  &trans  &trans    &trans  &trans  &trans          &trans          &trans           &trans  &trans
                                         &trans           &trans  &trans  &trans    &trans  &trans  &trans          &trans
             >;
         };
