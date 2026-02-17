@@ -120,11 +120,11 @@
         arrows {
             display-name = "Arrow";
             bindings = <
-&kp DELETE                &trans          &trans          &trans           &trans   &email                          &trans    &trans          &trans          &trans           &trans   &deleteChunk
-&trans                    &highlightLeft  &kp UP_ARROW    &highlightRight  &kp F9   &trans                          &trans    &highlightLeft  &kp UP_ARROW    &highlightRight  &trans   &trans
-&kp HOME                  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END  &trans                          &kp HOME  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END  &trans
-&kp LS(LA(LEFT_COMMAND))  &trans          &trans          &trans           &trans   &trans  &trans    &trans        &trans    &trans          &trans          &trans           &trans   &trans
-                                                          &trans           &trans   &trans  &trans    &executeCell  &trans    &trans          &trans
+&kp DELETE                &trans          &trans          &trans           &trans         &email                          &trans              &trans          &trans          &trans           &trans               &deleteChunk
+&trans                    &highlightLeft  &kp UP_ARROW    &highlightRight  &kp F9         &trans                          &trans              &highlightLeft  &kp UP_ARROW    &highlightRight  &trans               &trans
+&kp LG(LEFT_ARROW)        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LG(RIGHT)  &trans                          &kp LG(LEFT_ARROW)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LG(RIGHT_ARROW)  &trans
+&kp LS(LA(LEFT_COMMAND))  &trans          &trans          &trans           &trans         &trans  &trans    &trans        &trans              &trans          &trans          &trans           &trans               &trans
+                                                          &trans           &trans         &trans  &trans    &executeCell  &trans              &trans          &trans
             >;
         };
 
