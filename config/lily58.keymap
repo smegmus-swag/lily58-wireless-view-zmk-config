@@ -152,8 +152,8 @@
             display-name = "Bonus";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans              &trans              &trans         &trans  &superDelete
-&trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans              &kp RA(UP_ARROW)    &trans         &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                          &trans  &kp RA(LEFT_ARROW)  &kp RA(DOWN_ARROW)  &kp LA(RIGHT)  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans              &kp RG(UP_ARROW)    &trans         &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                          &trans  &kp RG(LEFT_ARROW)  &kp RG(DOWN_ARROW)  &kp RG(RIGHT)  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans        &trans  &trans              &trans              &trans         &trans  &trans
                         &trans  &trans  &trans  &trans    &executeCell  &trans  &trans              &trans
             >;
