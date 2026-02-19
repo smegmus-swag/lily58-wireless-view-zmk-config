@@ -76,6 +76,18 @@
         };
     };
 
+    behaviors {
+        lt_fast: lt_fast {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_FAST";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <50>;
+            quick-tap-ms = <0>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -89,11 +101,11 @@
 
             display-name = "Base";
             bindings = <
-&gresc        &kp N1  &kp N2  &kp N3            &kp N4  &kp N5                                    &kp N6        &kp N7           &kp N8       &kp N9   &kp N0            &kp BACKSPACE
-&kp TAB       &kp Q   &kp W   &kp E             &kp R   &kp T                                     &kp Y         &kp U            &kp I        &kp O    &kp P             &kp MINUS
-&kp LEFT_ALT  &kp A   &kp S   &kp D             &kp F   &kp G                                     &kp H         &kp J            &kp K        &kp L    &kp SINGLE_QUOTE  &kp SEMICOLON
-&kp LSHFT     &kp Z   &kp X   &kp C             &kp V   &kp B             &kp LBKT     &kp RBKT   &kp N         &kp M            &kp COMMA    &kp DOT  &kp FSLH          &lt 3 EQUAL
-                              &kp LEFT_CONTROL  &mo 2   &kp LEFT_COMMAND  &kp SPACE    &kp ENTER  &kp CAPSLOCK  &lt 2 BACKSLASH  &lt 1 GRAVE
+&gresc        &kp N1  &kp N2  &kp N3            &kp N4  &kp N5                                    &kp N6        &kp N7                &kp N8            &kp N9   &kp N0            &kp BACKSPACE
+&kp TAB       &kp Q   &kp W   &kp E             &kp R   &kp T                                     &kp Y         &kp U                 &kp I             &kp O    &kp P             &kp MINUS
+&kp LEFT_ALT  &kp A   &kp S   &kp D             &kp F   &kp G                                     &kp H         &kp J                 &kp K             &kp L    &kp SINGLE_QUOTE  &kp SEMICOLON
+&kp LSHFT     &kp Z   &kp X   &kp C             &kp V   &kp B             &kp LBKT     &kp RBKT   &kp N         &kp M                 &kp COMMA         &kp DOT  &kp FSLH          &lt_fast 3 EQUAL
+                              &kp LEFT_CONTROL  &mo 2   &kp LEFT_COMMAND  &kp SPACE    &kp ENTER  &kp CAPSLOCK  &lt_fast 2 BACKSLASH  &lt_fast 1 GRAVE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -138,11 +150,11 @@
 
             display-name = "Bonus";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans  &trans  &trans  &trans  &superDelete
-&trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans        &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans  &trans    &executeCell  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans              &trans              &trans         &trans  &superDelete
+&trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans              &kp RA(UP_ARROW)    &trans         &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                          &trans  &kp RA(LEFT_ARROW)  &kp RA(DOWN_ARROW)  &kp LA(RIGHT)  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans        &trans  &trans              &trans              &trans         &trans  &trans
+                        &trans  &trans  &trans  &trans    &executeCell  &trans  &trans              &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
