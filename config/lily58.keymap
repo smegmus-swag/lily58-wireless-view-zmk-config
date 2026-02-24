@@ -83,9 +83,9 @@
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <0>;
-            flavor = "hold-preferred";
+            tapping-term-ms = <155>;
+            quick-tap-ms = <125>;
+            flavor = "balanced";
         };
     };
 
@@ -112,7 +112,7 @@
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        bluetoofs {
+        Bluetoof {
             // ------------------------------------------------------------------------------------------------------------
             // | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |       |      |       |       |
             // |  F1   |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  F7  |  F8   |  F9   |  F10 |  F11  |  F12  |
@@ -122,22 +122,22 @@
 
             display-name = "Bluetoof";
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                          &trans  &trans        &trans            &kp C_PREVIOUS  &kp C_NEXT  &kp DELETE
-&trans      &trans        &trans        &trans        &trans        &trans                                &trans  &trans        &kp LS(UP_ARROW)  &trans          &trans      &kp C_VOLUME_UP
-&trans      &trans        &trans        &trans        &trans        &trans                                &trans  &kp LS(LEFT)  &kp LS(DOWN)      &kp LS(RIGHT)   &trans      &kp C_VOLUME_DOWN
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                          &trans  &trans        &trans            &kp C_PREVIOUS  &kp C_NEXT  &deleteChunk
+&trans      &trans        &trans        &trans        &trans        &trans                                &trans  &trans        &kp LA(UP_ARROW)  &trans          &trans      &kp C_VOLUME_UP
+&trans      &trans        &trans        &trans        &trans        &trans                                &trans  &kp LA(LEFT)  &kp LA(DOWN)      &kp LA(RIGHT)   &trans      &kp C_VOLUME_DOWN
 &trans      &trans        &trans        &trans        &trans        &trans        &trans    &trans        &trans  &trans        &trans            &trans          &trans      &kp C_PLAY_PAUSE
                                         &trans        &trans        &trans        &trans    &executeCell  &trans  &trans        &trans
             >;
         };
 
-        arrows {
+        Arrows {
             display-name = "Arrow";
             bindings = <
-&kp DELETE                &trans          &trans          &trans           &trans         &email                          &trans              &trans          &trans          &trans           &trans               &deleteChunk
-&trans                    &highlightLeft  &kp UP_ARROW    &highlightRight  &kp F9         &trans                          &trans              &highlightLeft  &kp UP_ARROW    &highlightRight  &trans               &trans
-&kp LG(LEFT_ARROW)        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LG(RIGHT)  &trans                          &kp LG(LEFT_ARROW)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LG(RIGHT_ARROW)  &trans
-&kp LS(LA(LEFT_COMMAND))  &trans          &trans          &trans           &trans         &trans  &trans    &trans        &trans              &trans          &trans          &trans           &trans               &trans
-                                                          &trans           &trans         &trans  &trans    &executeCell  &trans              &trans          &trans
+&kp DELETE                &trans          &trans          &trans           &trans         &email                                &trans              &trans          &trans          &trans           &trans               &deleteChunk
+&trans                    &highlightLeft  &kp UP_ARROW    &highlightRight  &kp F9         &trans                                &trans              &highlightLeft  &kp UP_ARROW    &highlightRight  &trans               &trans
+&kp LG(LEFT_ARROW)        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LG(RIGHT)  &trans                                &kp LG(LEFT_ARROW)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LG(RIGHT_ARROW)  &trans
+&kp LS(LA(LEFT_COMMAND))  &trans          &trans          &trans           &trans         &trans  &trans          &trans        &trans              &trans          &trans          &trans           &trans               &trans
+                                                          &trans           &trans         &trans  &executeCell    &executeCell  &trans              &trans          &trans
             >;
         };
 
@@ -151,9 +151,9 @@
 
             display-name = "Bonus";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans              &trans              &trans         &trans  &superDelete
-&trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans              &kp RG(UP_ARROW)    &trans         &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                          &trans  &kp RG(LEFT_ARROW)  &kp RG(DOWN_ARROW)  &kp RG(RIGHT)  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans              &trans              &trans         &trans  &kp DELETE
+&trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans              &kp RS(UP_ARROW)    &trans         &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                          &trans  &kp RS(LEFT_ARROW)  &kp RS(DOWN_ARROW)  &kp RS(RIGHT)  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans        &trans  &trans              &trans              &trans         &trans  &trans
                         &trans  &trans  &trans  &trans    &executeCell  &trans  &trans              &trans
             >;
@@ -166,5 +166,15 @@
         extra_2 { status = "reserved"; };
 
         extra_3 { status = "reserved"; };
+
+        cmdy {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans              &trans              &trans               &trans  &superDelete
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans              &kp LG(UP_ARROW)    &trans               &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &kp LG(LEFT_ARROW)  &kp LG(DOWN_ARROW)  &kp LG(RIGHT_ARROW)  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans              &trans              &trans               &trans  &kp C_AC_NEXT_KEYBOARD_LAYOUT_SELECT
+                        &trans  &trans  &trans  &trans    &trans  &trans  &trans              &trans
+            >;
+        };
     };
 };
